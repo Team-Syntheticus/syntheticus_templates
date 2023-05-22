@@ -1,0 +1,19 @@
+config_version: '1.0'
+config_name: base
+config_steps:
+    - data:
+        dataset_version: # NAME OF DATASET VERSION
+    - transform:
+    - model:
+    - sample:
+        number_of_rows: ''
+    - metrics:
+        - table_name:
+            column_plot: [column1, column2, ...]
+            column_pair_plot: [[column1, column2], [column3, column4], ...]
+            cap: [
+                [
+                    [key_field1, key_field2, ...],
+                    [sensitive_field1, sensitive_field2, ...]
+                ]
+                ]
