@@ -13,26 +13,26 @@ config_steps:
                   parameters: # length of columns == length of providers
                     columns: ['column1', 'column2', ...] 
                     providers: ['job', 'catch_phrase', ...]
-                    seed: 5783573
-                    locale: ['en_US']
-                    unique: False
+                    seed: 5783573 # optional
+                    locale: ['en_US'] # optional
+                    unique: False # optional
                 - type: hash
                   parameters:
                     columns: ['column1', ...]
-                    hash_type: 'sha256'
-                    salt: 'salt'
+                    hash_type: 'sha256' # optional
+                    salt: 'salt' # optional
                 - type: number_shift
                   parameters:
                     columns: ['numeric_column1', 'numeric_column2', ...]
-                    min: -1000
-                    max: 1000
-                    precision: 0
+                    min: -1000 # optional
+                    max: 1000 # optional
+                    precision: 0 # optional
                 - type: date_shift
                   parameters:
                     columns: ['date_column', ...]
-                    min: -30
-                    max: 30
-                    formats: infer
+                    min: -30 # optional
+                    max: 30 # optional
+                    formats: infer # optional
                 - type: generalize
                   parameters:
                     columns: ['numeric_column', ...]
@@ -43,7 +43,7 @@ config_steps:
                     columns: ['column1', 'column2', ...]
                 - type: k_anonymity
                   parameters:
-                    k: 10
+                    k: 10 # optional
                     quasi_identifiers: ['column1', 'column2', ...]
                     generalization_columns:
                         column1:
@@ -51,18 +51,18 @@ config_steps:
                             labels: ['4-8']
                 - type: l_diversity
                   parameters:
-                    l: 2
+                    l: 2 # optional
                     columns: ['sensitive_column', ...]
                     quasi_identifiers: ['column1', 'column2', ...]
                 - type: t_closeness
                   parameters:
                     columns: ['sensitive_column', ...]
                     quasi_identifiers: ['column1', 'column2', ...]
-                    t: 0.1
+                    t: 0.1 # optional
                 - type: perturbation
                   parameters:
                     columns: ['numeric_column1', 'numeric_column2', ...]
-                    noise_scale: 0.1
+                    noise_scale: 0.1 # optional
                 - type: tokenization
                   parameters:
                     columns: ['text_column', ...]
