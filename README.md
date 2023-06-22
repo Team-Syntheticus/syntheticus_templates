@@ -185,6 +185,287 @@ Each transformation type accepts a different set of parameters. Here are the des
 * `'t'`: t value for t-closeness.
 * `'noise_scale'`: Scale of the normal distribution to generate noise from for perturbation.
 
+List of Fake `'providers'`:
+```python
+[
+    # Address provider
+    'address',
+    'building_number',
+    'city',
+    'city_suffix',
+    'country',
+    'country_code',
+    'current_country',
+    'current_country_code',
+    'postcode',
+    'street_address',
+    'street_name',
+    'street_suffix',
+
+    # Automotive provider
+    'license_plate',
+
+    # Bank provider
+    'aba',
+    'bank_country',
+    'bban',
+    'iban',
+    'swift',
+    'swift11',
+    'swift8',
+
+    # Barcode provider
+    'ean',
+    'ean13',
+    'ean8',
+    'localized_ean',
+    'localized_ean13',
+    'localized_ean8',
+
+    # Color provider
+    'color',
+    'color_name',
+    'hex_color',
+    'rgb_color',
+    'rgb_css_color',
+    'safe_color_name',
+    'safe_hex_color',
+
+    # Company provider
+    'bs',
+    'catch_phrase',
+    'company',
+    'company_suffix',
+
+    # Credit card provider
+    'credit_card_expire',
+    'credit_card_full',
+    'credit_card_number',
+    'credit_card_provider',
+    'credit_card_security_code',
+
+    # Currency provider
+    'cryptocurrency',
+    'cryptocurrency_code',
+    'cryptocurrency_name',
+    'currency',
+    'currency_code',
+    'currency_name',
+    'currency_symbol',
+    'pricetag',
+
+    # Datetime provider
+    'am_pm',
+    'century',
+    'date',
+    'date_between',
+    'date_between_dates',
+    'date_object',
+    'date_of_birth',
+    'date_this_century',
+    'date_this_decade',
+    'date_this_month',
+    'date_this_year',
+    'date_time',
+    'date_time_ad',
+    'date_time_between',
+    'date_time_between_dates',
+    'date_time_this_century',
+    'date_time_this_decade',
+    'date_time_this_month',
+    'date_time_this_year',
+    'day_of_month',
+    'day_of_week',
+    'future_date',
+    'future_datetime',
+    'iso8601',
+    'month',
+    'month_name',
+    'past_date',
+    'past_datetime',
+    'pytimezone',
+    'time',
+    'time_delta',
+    'time_object',
+    'time_series',
+    'timezone',
+    'unix_time',
+    'year',
+
+    # Emoji provider
+    'emoji',
+
+    # File provider
+    'file_extension',
+    'file_name',
+    'file_path',
+    'mime_type',
+    'unix_device',
+    'unix_partition',
+
+    # Geo provider
+    'coordinate',
+    'latitude',
+    'latlng',
+    'local_latlng',
+    'location_on_land',
+    'longitude',
+
+    # Internet provider
+    'ascii_company_emai',
+    'ascii_email',
+    'ascii_free_email',
+    'ascii_safe_email',
+    'company_email',
+    'dga',
+    'domain_name',
+    'domain_word',
+    'email',
+    'free_email',
+    'free_email_domain',
+    'hostname',
+    'http_method',
+    'iana_id',
+    'image_url',
+    'ipv4',
+    'ipv4_network_class',
+    'ipv4_private',
+    'ipv4_public',
+    'ipv6',
+    'mac_address',
+    'nic_handle',
+    'nic_handles',
+    'port_number',
+    'ripe_id',
+    'safe_domain_name',
+    'safe_emai',
+    'slug',
+    'tld',
+    'uri',
+    'uri_extension',
+    'uri_page',
+    'uri_path',
+    'url',
+    'username',
+
+    # ISBN provider
+    'isbn10',
+    'isbn13',
+
+    # Job provider
+    'job',
+
+    # Lorem provider
+    'paragraph',
+    'paragraphs',
+    'sentence',
+    'sentences',
+    'text',
+    'texts',
+    'word',
+    'words',
+
+    # MISC provider
+    'binary',
+    'boolean',
+    'csv',
+    'dsv',
+    'fixed_width',
+    'image',
+    'json', 
+    'json_bytes',
+    'md5',
+    'null_boolean',
+    'password',
+    'psv',
+    'sha1',
+    'sha256',
+    'tar',
+    'tsv',
+    'uuid4',
+    'xml',
+    'zip',
+
+    # Passport provider
+    'passport_dob',
+    'passport_number',
+    'passport_owner',
+
+    # Person provider
+    'first_name',
+    'first_name_female',
+    'first_name_male',
+    'first_name_nonbinary',
+    'language_name',
+    'last_name',
+    'last_name_female',
+    'last_name_male',
+    'last_name_nonbinar',
+    'name',
+    'name_female',
+    'name_male', 
+    'name_nonbinary',
+    'prefix',
+    'prefix_female',
+    'prefix_male',
+    'prefix_nonbinary',
+    'suffix',
+    'suffix_female',
+    'suffix_male',
+    'suffix_nonbinary',
+
+    # Phone number provider
+    'country_calling_code',
+    'msisd', 
+    'phone_number',
+
+    # Profile provider
+    'profile',
+    'simple_profile',
+
+    # Python provider
+    'enum',
+    'pybool',
+    'pydecimal',
+    'pydict',
+    'pyfloat',
+    'pyint',
+    'pyiterable',
+    'pylist',
+    'pyobject',
+    'pyset',
+    'pystr',
+    'pystr_format',
+    'pystruct',
+    'pytuple',
+
+    # SBN provider
+    'sbn9',
+
+    # SSN provider
+    'ssn',
+
+    # User Agent provider
+    'android_platform_token',
+    'chrome',
+    'firefox',
+    'internet_explorer',
+    'ios_platform_token',
+    'linux_platform_token',
+    'linux_processor',
+    'mac_platform_token',
+    'mac_processor',
+    'opera',
+    'safari',
+    'user_agent',
+    'windows_platform_token'
+    
+    
+    
+]
+
+```
+
 Please refer to the specific transformation sections above for how to use these parameters in the YAML configuration file.
 
 ## Model
