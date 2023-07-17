@@ -2,7 +2,7 @@ config_version: '1.0'
 config_name: base
 config_steps:
     - data:
-        dataset_version: # NAME OF DATASET VERSION
+        dataset_version: dataset_name # NAME OF DATASET VERSION
     - transform:
     - model:
     - sample:
@@ -11,9 +11,16 @@ config_steps:
         - table_name:
             column_plot: [column1, column2, ...]
             column_pair_plot: [[column1, column2], [column3, column4], ...]
-            cap: [
-                [
-                    [key_field1, key_field2, ...],
-                    [sensitive_field1, sensitive_field2, ...]
-                ]
-                ]
+            cap: [[[key_field1, key_field2, ...],[sensitive_field1, sensitive_field2, ...]]]
+            cs_test: [column1, column2, ...]
+            ml_efficacy:
+                type: BinaryClassification # or MutliclassClassification
+                model: BinaryAdaBoostClassifier # BinaryClassification: BinaryDecisionTreeClassifier, BinaryLogisticRegression, BinaryMLPClassifier
+                                                # MulticlassClassification: MulticlassDecisionTreeClassifier, MulticlassMLPClassifier
+                columns: [column1, column2, ...]
+            privacy_against_inference:
+                type: Numerical # or Categorical
+                model: NumericalMLP # Numerical: NumericalLR, NumericalSVR, NumericalRadiusNearestNeighbor
+                                    # Categorical: CategoricalKNN, CategoricalNB, CategoricalRF, CategoricalEnsemble
+                key_fields: [[column1, ...], [column2, column3], ...] # same size as sensitive_fields
+                sensitive_fields: [[column4, ...], [column5. column6, ...]] # same size as key_fields
