@@ -11,7 +11,9 @@ config_steps:
         - table_name:
             column_plot: [column1, column2, ...]
             column_pair_plot: [[column1, column2], [column3, column4], ...]
-            cap: [[[key_field1, key_field2, ...],[sensitive_field1, sensitive_field2, ...]]]
+            cap: 
+                key_fields: [[column1, ...], [column2, column3], ...] # same size as sensitive_fields
+                sensitive_fields: [[column4, ...], [column5. column6, ...]] # same size as key_fields
             cs_test: [column1, column2, ...]
             ml_efficacy:
                 type: BinaryClassification # or MutliclassClassification
